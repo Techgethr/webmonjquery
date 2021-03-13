@@ -1,0 +1,154 @@
+<html>
+    <head>
+        <title>WebMonetization Example</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.css">
+        <link rel="stylesheet" href="css/Site.css">
+       
+        <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript">
+        </script>
+
+
+        <script src="./WebMonetization.js" type="text/javascript">
+        </script>
+        <script type="text/javascript">
+            function checkEnabled()
+            {
+                alert($(document).webmonetization('isBrowserEnabled'));
+            }
+            function checkWebMonetizationFeature()
+            {
+                alert($(document).webmonetization('getMonetizationState'));
+            }
+            function start()
+            {
+                $(document).webmonetization('start','pointer');
+            }
+            function isPendingState()
+            {
+                alert($(document).webmonetization('isPendingState'));
+            }
+            function isStartedState()
+            {
+                alert($(document).webmonetization('isStartedState'));
+            }
+            function isStoppedState()
+            {
+                alert($(document).webmonetization('isStoppedState'));
+            }
+            function isUndefinedState()
+            {
+                alert($(document).webmonetization('isUndefinedState'));
+            }
+            function changePointer()
+            {
+                $(document).webmonetization('changePointer','new-pointer');
+            }
+
+            function getTotalAmountFromCurrentUser()
+            {
+                alert($(document).webmonetization('getTotalAmountFromCurrentUser'));
+            }
+
+            function getScaleFromCurrentUser()
+            {
+                alert($(document).webmonetization('getScaleFromCurrentUser'));
+            }
+            function getCurrentPointer()
+            {
+                alert($(document).webmonetization('getCurrentPointer'));
+            }
+            function getAssetCodeFromCurrentUser()
+            {
+                alert($(document).webmonetization('getAssetCodeFromCurrentUser'));
+            }
+            function stop()
+            {
+                $(document).webmonetization('stop');
+            }
+            
+        </script>
+    </head>
+    <body>
+        <div class="jumbotron">
+            <h1>WebMonetization Example #1</h1>
+            <p class="lead">WebMonetization is a JavaScript browser API that allows the creation of a payment stream from the user agent to the website</p>
+            <p><a href="https://webmonetization.org/" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Check if browser is enabled</h2>
+                <p>Using "isBrowserEnabled()" function</p>
+                <p><button onclick="checkEnabled()" class="btn btn-default">Check WebMonetization feature in this web browser</button></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Verify State</h2>
+                <p>Using "getMonetizationState()" function</p>
+                <p><button onclick="checkWebMonetizationFeature()" class="btn btn-default">Check WebMonetization status in this web browser</button></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Start webmonetization</h2>
+                <p>Using "start()" function. After pressing the button, verify that the "meta" tag associated with monetization exists.</p>
+                <p><button onclick="start()" class="btn btn-default">Initialize WebMonetization in this browser</button></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Check if monetization is in pending state</h2>
+                <p>Using "isPendingState()" function</p>
+                <p><button onclick="isPendingState()" class="btn btn-default">Check pending state</button></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Check if monetization is in started state</h2>
+                <p>Using "isStartedState()" function</p>
+                <p><button onclick="isStartedState()" class="btn btn-default">Check started state</button></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Check if monetization is in stopped state</h2>
+                <p>Using "isStoppedState()" function</p>
+                <p><button onclick="isStoppedState()" class="btn btn-default">Check stopped state</button></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Check if monetization is in undefined state</h2>
+                <p>Using "isUndefinedState()" function</p>
+                <p><button onclick="isUndefinedState()" class="btn btn-default">Check undefined state (WebMonetization is not available in this browser)</button></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Change pointer in meta tag</h2>
+                <p>Using "changePointer()" function</p>
+                <p><button onclick="changePointer()" class="btn btn-default">Change for a new pointer if required in meta tag.</button></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Check total amount from current user.</h2>
+                <p>Using "getTotalAmountFromCurrentUser()" function</p>
+                <p><button onclick="getTotalAmountFromCurrentUser()" class="btn btn-default">Check how much we get from this user.</button></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <h2>Get the scale</h2>
+                <p>Using "getScaleFromCurrentUser()" function</p>
+                <p><button onclick="getScaleFromCurrentUser()" class="btn btn-default">Get the scale for payments from this user.</button></p>
+            </div>
+            <div class="col-md-3">
+                <h2>Get the current pointer</h2>
+                <p>Using "getCurrentPointer()" function</p>
+                <p><button onclick="getCurrentPointer()" class="btn btn-default">Get the current pointer in this session.</button></p>
+            </div>
+            <div class="col-md-3">
+                <h2>Get the asset code for payment from current user.</h2>
+                <p>Using "getAssetCodeFromCurrentUser()" function</p>
+                <p><button onclick="getAssetCodeFromCurrentUser()" class="btn btn-default">Get the current asset code.</button></p>
+            </div>
+            <div class="col-md-3">
+                <h2>Stop webmonetization in this browser</h2>
+                <p>Using "stop()" function</p>
+                <p><button onclick="stop()" class="btn btn-default">Stop webmonetization for this user.</button></p>
+            </div>
+        </div>
+        
+
+    </body>
+</html>
