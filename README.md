@@ -20,6 +20,7 @@ To consume this library, just add in the web header this library, its full versi
 **Full version**
 
 ```html
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript"> </script>
     <script src="WebMonetization.js" type="text/javascript"></script>
 ```
 
